@@ -1,0 +1,25 @@
+
+<form role="form">
+
+	<div class="form-group">
+		<label for="question">Question:</label>
+		<input type="text" class="form-control" id="question" ng-model="card.question"placeholder="{{ card.question }}">
+	</div>
+	<div class="form-group">
+		<label for="answer">Answer:</label>
+		<input type="text" class="form-control" id="answer" ng-model="card.answer" placeholder="{{ card.answer }}">
+	</div>
+	<div class="form-group">
+		<label for="category">Category:</label>
+		<input type="text" class="form-control" id="category" ng-model="card.category" placeholder="{{ card.category }}">
+	</div>
+	
+	<button ng-click="create()">Create Flashcard!!</button>
+
+</form>
+
+
+<ol ng-repeat="obj in cards">
+	<li  ui-sref="detail({ id: obj._id, index: $index, question:obj.question })">{{ obj.question }}</li>
+</ol>
+

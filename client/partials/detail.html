@@ -1,0 +1,26 @@
+<a href="#/">Back to Flashcards</a> 
+
+<h3> Question: {{ card.question }} </h3>
+<h3> Answer: {{ card.answer }} </h3>
+<h3> Category: {{ card.category }} </h3>
+
+<form role="form">
+
+	<div class="form-group">
+		<label for="question">Question:</label>
+		<input type="text" class="form-control" id="question" ng-model="updatedCard.question"placeholder="{{ card.question }}">
+	</div>
+	<div class="form-group">
+		<label for="answer">Answer:</label>
+		<input type="text" class="form-control" id="answer" ng-model="updatedCard.answer" placeholder="{{ card.answer }}">
+	</div>
+	<div class="form-group">
+		<label for="category">Category:</label>
+		<input type="text" class="form-control" id="category" ng-model="updatedCard.category" placeholder="{{ card.category }}">
+	</div>
+	
+	<button ng-click="update()">Update Flashcard!!</button>
+	
+	<button ng-click="remove()" ng-href="#/home">Delete</button>
+
+</form>
